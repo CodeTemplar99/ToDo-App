@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TODo App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./icons/css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        body {
+            background: #237a4a;
+            font-size: 100%;
+        }
+
+        .container-fluid {
+            display: flex;
+            justify-content: center;
+        }
+
+        .tab-con {
+            /* border: 1px solid blue; */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tabs {
+            /* border: 1px solid green; */
+            display: flex;
+            /* width: 150px; */
+            margin-bottom: 0px;
+            padding: 10px !important;
+        }
+
+        .icon-text-con {
+            /* border: 1px solid blue; */
+            display: flex;
+            flex-direction: column;
+            width: 90px;
+        }
+
+        .btn {
+            font-size: 14px;
+            height: 30px;
+        }
+
+        .list-group-item {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .enter-new-task-con {
+            position: fixed;
+            left: 30%;
+            width: 40%;
+            display: none;
+        }
+    </style>
+
+    <div class="container-fluid">
+        <div class="jumbotron mt-3 col-sm-10 px-2 py-2 pb-4">
+            <div class="jumbotron px-1 py-2 tab-con">
+                <div class="jumbotron bg-success px-1 pr-0 py-2 tabs complete">
+                    <div class="icon-text-con mr-1">
+                        <span><i class="fa fa-check"></i></span>
+                        <span>Complete</span>
+                    </div>
+                    <p class="lead font-weight-bold">20</p>
+                </div>
+                <div class="jumbotron bg-primary px-1 pr-0 py-2 tabs running">
+                    <div class="icon-text-con mr-1">
+                        <span><i class="fa fa-check"></i></span>
+                        <span>Complete</span>
+                    </div>
+                    <p class="lead font-weight-bold">20</p>
+                </div>
+                <div class="jumbotron bg-warning px-1 pr-0 py-2 tabs missed">
+                    <div class="icon-text-con mr-1">
+                        <span><i class="fa fa-check"></i></span>
+                        <span>Complete</span>
+                    </div>
+                    <p class="lead font-weight-bold">20</p>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-sm-between px-4 mb-0">
+                <p class="lead ml-3">Activities</p><button class="btn btn-primary py-0 create-task"><i
+                        class="fa fa-plus"></i>
+                    Add new task</button>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div>
+                        <input type="checkbox" class="mr-3">
+                        Cras justo odio
+                    </div>
+                    <div class="times-con"><i class="fa fa-times"></i></div>
+                </li>
+            </ul>
+
+            <div class="jumbotron bg-dark enter-new-task-con">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control p-4">
+                </div>
+                <button class="btn btn-primary add-now-button">Add Task</button>
+
+            </div>
+        </div>
+        <script src="/script.js"></script>
+</body>
+
+</html>
