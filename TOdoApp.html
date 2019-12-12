@@ -55,6 +55,7 @@
         .enter-new-task-con {
             position: fixed;
             left: 30%;
+            top: 30%;
             width: 40%;
             display: none;
         }
@@ -92,18 +93,12 @@
                     Add new task</button>
             </div>
             <ul class="list-group">
-                <li class="list-group-item">
-                    <div>
-                        <input type="checkbox" class="mr-3">
-                        Add a new Task to this list
-                    </div>
-                    <div class="times-con"><i class="fa fa-times"></i></div>
-                </li>
+
             </ul>
 
             <div class="jumbotron bg-dark enter-new-task-con">
                 <div class="input-group mb-3">
-                    <input type="text" id="task-fill" class="form-control p-4">
+                    <input type="text" id="task-fill" autofocus class="form-control p-4">
                 </div>
                 <button class="btn btn-primary add-now-button">Add Task</button>
 

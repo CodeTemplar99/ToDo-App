@@ -1,20 +1,4 @@
 
-// document.querySelector(".see").addEventListener("click", sortTable);
-// function sortTable() {
-//     for (var i = 0; i < countryInfo.length; i += 1) {
-//         var row = document.querySelector("tbody").insertRow()
-//         row.innerHTML = "<td>" + countryInfo[i].Country + "</td>"
-//             + "<td>" + countryInfo[i].Capital + "</td>"
-//             + "<td>" + countryInfo[i].Continent + "</td>"
-//             + "<td>" + countryInfo[i].Currency + "</td>"
-//             + "<td>" + countryInfo[i].President + "</td>"
-//             + "<td>" + countryInfo[i].Population + "</td>"
-//         console.log(countryInfo[i].Country)
-//     }
-
-// }
-
-
 // creat task
 document.querySelector(".create-task").addEventListener("click", newTask)
 
@@ -25,18 +9,6 @@ function newTask() {
 
 // add task now
 document.querySelector(".add-now-button").addEventListener("click", addTaskNow)
-
-
-// function newElement() {
-//     var li = document.createElement("li");
-//     var inputValue = document.getElementById("myInput").value;
-//     var t = document.createTextNode(inputValue);
-//     li.appendChild(t);
-//     if (inputValue === '') {
-//         alert("You must write something!");
-//     } else {
-//         document.getElementById("myUL").appendChild(li);
-//     }
 
 function addTaskNow() {
     for (var i = 0; i < 1; i++) {
@@ -60,11 +32,26 @@ function addTaskNow() {
             li.className = "list-group-item";
             checker_text_con.append(checker, task_text);
             li.append(checker_text_con, del);
-        }
 
-        document.querySelector(".list-group").appendChild(li);
-        var see = document.querySelector(".enter-new-task-con");
-        see.style.display = "none";
+            function removeTask(i, j) {
+                i.addEventListener("click", run)
+            }
+
+
+            document.querySelector(".list-group").appendChild(li);
+            var see = document.querySelector(".enter-new-task-con");
+            see.style.display = "none";
+        }
     }
+
+    var zero = document.querySelectorAll(".fa-times");
+    zero.forEach(removeTask);
+
 }
 
+function run() {
+    for (i = 0; i < 1; i++) {
+        li = document.querySelector(".list-group-item")
+        document.querySelector(".list-group").removeChild(li);
+    }
+}
