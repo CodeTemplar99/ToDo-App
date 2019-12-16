@@ -59,6 +59,14 @@
             width: 40%;
             display: none;
         }
+
+        .written {
+            color: red;
+        }
+
+        .checked {
+            text-decoration: line-through;
+        }
     </style>
 
     <div class="container-fluid">
@@ -88,11 +96,31 @@
             </div>
 
             <div class="d-flex justify-content-sm-between px-4 mb-0">
-                <p class="lead ml-3">Activities</p><button class="btn btn-primary py-0 create-task"><i
+                <p class="lead ml-3">Active Tasks</p><button class="btn btn-primary py-0 create-task"><i
                         class="fa fa-plus"></i>
                     Add new task</button>
             </div>
             <ul class="list-group">
+                <li class="list-group-item">
+                    <div>
+                        <span class="lead text-primary">New and Active tasks will appear here</span>
+                    </div>
+                </li>
+
+            </ul>
+            <div>
+
+
+            </div>
+            <div class="d-flex justify-content-sm-between px-4 mt-4 mb-0">
+                <p class="lead ml-3 mb-1 mt-4">Deleted Tasks</p>
+            </div>
+            <ul class="list-group deactivated">
+                <li class="list-group-item">
+                    <div>
+                        <span class="lead text-muted">Deleted Tasks will be moved here</span>
+                    </div>
+                </li>
 
             </ul>
 
@@ -103,6 +131,8 @@
                 <button class="btn btn-primary add-now-button">Add Task</button>
 
             </div>
+
+
         </div>
         <script src="/script.js"></script>
 </body>
